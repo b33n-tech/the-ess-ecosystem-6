@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "name": "BPI France",
+      "tags": ["financier", "subvention"],
+      "calls": [
+        {
+          "title": "Appel à projet IA",
+          "deadline": "2025-12-01",
+          "url": "https://bpi.fr/projet-ia",
+          "tags": ["innovation"],
+          "note": "Pour startups IA"
+        },
+        {
+          "title": "Subvention Transition Énergétique",
+          "deadline": "2025-11-15",
+          "url": "https://bpi.fr/transition",
+          "tags": ["environnement"],
+          "note": "Soutien aux PME"
+        }
+      ]
+    },
+    {
+      "name": "Incubateur XYZ",
+      "tags": ["accompagnement"],
+      "calls": [
+        {
+          "title": "Programme Accélération 2025",
+          "deadline": "2025-11-30",
+          "url": "https://xyz.fr/acceleration",
+          "tags": ["mentorat", "prototype"],
+          "note": "Idéal pour projets early stage"
+        }
+      ]
+    }
+  ]
+}
