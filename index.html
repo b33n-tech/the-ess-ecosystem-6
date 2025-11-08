@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appels à projets & Concours</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📢 Appels à projets & Concours</h1>
+  </header>
+
+  <!-- Filtres -->
+  <div id="filters">
+    <select id="filter-stage">
+      <option value="">Stade du projet</option>
+      <option value="idee">Idée / Concept</option>
+      <option value="prototype">Prototype / Test</option>
+      <option value="lancement">Lancement / Déploiement</option>
+    </select>
+
+    <select id="filter-need">
+      <option value="">Type de besoin</option>
+      <option value="financier">Financier</option>
+      <option value="accompagnement">Accompagnement</option>
+      <option value="outil">Outils / Services</option>
+    </select>
+  </div>
+
+  <!-- Cartes -->
+  <div id="cards"></div>
+
+  <!-- Wishlist -->
+  <div id="wishlist-container">
+    <h2>⭐ Ma sélection</h2>
+    <ul id="wishlist-list"></ul>
+    <button id="download-wishlist">📄 Télécharger ma sélection</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
