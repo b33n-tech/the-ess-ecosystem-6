@@ -8,8 +8,8 @@
           "title": "Appel à projet IA",
           "deadline": "2025-12-01",
           "url": "https://bpi.fr/projet-ia",
-          "stage": "prototype",          // Stade du projet
-          "tags": ["financier","innovation"],  // Type de besoin
+          "stage": "prototype",
+          "tags": ["financier","outil"],
           "note": "Pour startups IA"
         },
         {
@@ -17,7 +17,7 @@
           "deadline": "2025-11-15",
           "url": "https://bpi.fr/transition",
           "stage": "idee",
-          "tags": ["financier","environnement"],
+          "tags": ["financier","outil"],
           "note": "Soutien aux PME"
         }
       ]
@@ -31,8 +31,30 @@
           "deadline": "2025-11-30",
           "url": "https://xyz.fr/acceleration",
           "stage": "prototype",
-          "tags": ["accompagnement","mentorat"],
+          "tags": ["accompagnement","outil"],
           "note": "Idéal pour projets early stage"
+        },
+        {
+          "title": "Mentorat pour startups",
+          "deadline": "2025-12-10",
+          "url": "https://xyz.fr/mentorat",
+          "stage": "idee",
+          "tags": ["accompagnement"],
+          "note": "Conseils pour structurer son projet"
+        }
+      ]
+    },
+    {
+      "name": "Fondation ABC",
+      "tags": ["financier"],
+      "calls": [
+        {
+          "title": "Subvention Innovation Sociale",
+          "deadline": "2025-12-20",
+          "url": "https://abc.fr/innovation",
+          "stage": "lancement",
+          "tags": ["financier"],
+          "note": "Pour projets ayant un impact social"
         }
       ]
     }
