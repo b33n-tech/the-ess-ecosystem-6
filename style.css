@@ -1,0 +1,188 @@
+/* --- Reset / global --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  padding: 1rem;
+}
+
+/* --- Header --- */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* --- Filtres --- */
+#filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+#filters select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+#filters select:hover {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52,152,219,0.3);
+}
+
+/* --- Cards container --- */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- Card --- */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* --- Card selected (wishlist) --- */
+.card.selected {
+  border: 2px solid #f1c40f;
+  background: #fff9e6;
+}
+
+/* --- Card headings / text --- */
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* --- Tags --- */
+.tag {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #555;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  margin: 0.2rem 0.2rem 0 0;
+}
+
+/* --- Wishlist container --- */
+#wishlist-container {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#wishlist-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+#wishlist-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+#wishlist-list li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* --- Buttons --- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.wishlist-btn {
+  background: #f1c40f;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.wishlist-btn:hover {
+  background: #d4ac0d;
+}
+
+#download-wishlist {
+  background: #3498db;
+  color: #fff;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#download-wishlist:hover {
+  background: #2980b9;
+}
+
+#wishlist-container button {
+  background: #e74c3c;
+  color: #fff;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+#wishlist-container button:hover {
+  background: #c0392b;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  #filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+  }
+}
