@@ -27,7 +27,7 @@ function displayCards(sources) {
     source.calls.forEach(call => {
       // --- Filtres ---
       if (stageFilter && call.stage !== stageFilter) return;
-      if (needFilter && !call.tags.includes(needFilter)) return;
+      if (needFilter && !(call.tags || []).includes(needFilter)) return;
 
       const card = createCard(call, source);
       container.appendChild(card);
@@ -48,14 +48,20 @@ function createCard(call, source) {
     <a href="${call.url}" target="_blank">Voir le projet</a>
   `;
 
+  // --- Tags + stade du projet ---
   const tagContainer = document.createElement('div');
-  (source.tags.concat(call.tags || [])).forEach(tag => {
+  const allTags = (source.tags || []).concat(call.tags || []);
+  if(call.stage) allTags.push(call.stage);
+
+  allTags.forEach(tag => {
     const span = document.createElement('span');
-    span.className='tag'; span.textContent=tag;
+    span.className='tag';
+    span.textContent = tag;
     tagContainer.appendChild(span);
   });
   card.appendChild(tagContainer);
 
+  // --- Bouton wishlist ---
   const wishlistBtn = document.createElement('button');
   wishlistBtn.className='wishlist-btn';
   wishlistBtn.textContent = wishlist.some(item => item.id === source.name+'::'+call.title) ? '⭐ Retirer' : '⭐ Ajouter';
@@ -113,7 +119,7 @@ function downloadWishlistPDF(){
     doc.setFontSize(12); doc.text(`${idx+1}. ${item.title}`,10,y); y+=6;
     doc.setFontSize(10); doc.text(`Structure : ${item.source}`,10,y); y+=5;
     doc.text(`Date limite : ${item.deadline}`,10,y); y+=5;
-    doc.text(`Tags : ${(item.tags||[]).join(', ')}`,10,y); y+=5;
+    doc.text(`Tags : ${(item.tags||[]).join(', ')} | Stade : ${item.stage || 'N/A'}`,10,y); y+=5;
     doc.text(`Note : ${item.note}`,10,y); y+=10;
     if(y>270){ doc.addPage(); y=10; }
   });
