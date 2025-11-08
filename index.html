@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appels à projets & Concours</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plateforme Appels à Projet</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>📢 Appels à projets & Concours</h1>
-  </header>
+<header>
+  <h1>Plateforme Appels à Projet</h1>
+</header>
 
-  <!-- Filtres -->
-  <div id="filters">
-    <select id="filter-stage">
-      <option value="">Stade du projet</option>
-      <option value="idee">Idée / Concept</option>
-      <option value="prototype">Prototype / Test</option>
-      <option value="lancement">Lancement / Déploiement</option>
-    </select>
+<div id="filters">
+  <select id="filter-stage">
+    <option value="">Stade du projet</option>
+    <option value="idee">Idée / Concept</option>
+    <option value="prototype">Prototype / Test</option>
+    <option value="lancement">Lancement / Déploiement</option>
+  </select>
 
-    <select id="filter-need">
-      <option value="">Type de besoin</option>
-      <option value="financier">Financier</option>
-      <option value="accompagnement">Accompagnement</option>
-      <option value="outil">Outils / Services</option>
-    </select>
-  </div>
+  <select id="filter-need">
+    <option value="">Type de besoin</option>
+    <option value="financier">Financier</option>
+    <option value="accompagnement">Accompagnement</option>
+    <option value="outil">Outils / Services</option>
+  </select>
 
-  <!-- Cartes -->
-  <div id="cards"></div>
+  <select id="filter-deadline">
+    <option value="">Quand avez-vous besoin de la solution ?</option>
+    <option value="now">Maintenant</option>
+    <option value="1month">Dans 1 mois</option>
+    <option value="3months">Dans 3 mois</option>
+  </select>
+</div>
 
-  <!-- Wishlist -->
-  <div id="wishlist-container">
-    <h2>⭐ Ma sélection</h2>
-    <ul id="wishlist-list"></ul>
-    <button id="download-wishlist">📄 Télécharger ma sélection</button>
-  </div>
+<div id="cards"></div>
 
-  <script src="script.js"></script>
+<div id="wishlist-container">
+  <h2>Ma sélection</h2>
+  <ul id="wishlist-list"></ul>
+  <button id="download-wishlist">📥 Télécharger ma sélection</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
